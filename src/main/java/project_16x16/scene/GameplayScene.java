@@ -17,12 +17,12 @@ import processing.event.MouseEvent;
 import project_16x16.projectiles.ProjectileObject;
 import project_16x16.Audio;
 import project_16x16.Options;
-import project_16x16.SideScroller;
+import project_16x16.Main;
 import project_16x16.Tileset;
 import project_16x16.Tileset.tileType;
 import project_16x16.Util;
 import project_16x16.Audio.BGM;
-import project_16x16.SideScroller.GameScenes;
+import project_16x16.Main.GameScenes;
 import project_16x16.ui.Anchor;
 import project_16x16.ui.ScrollBarVertical;
 import project_16x16.ui.Tab;
@@ -102,7 +102,7 @@ public class GameplayScene extends PScene {
 
 	private SelectionBox selectionBox;
 
-	public GameplayScene(SideScroller a, String levelString) {
+	public GameplayScene(Main a, String levelString) {
 		super(a);
 		this.levelString = levelString;
 		setup();
@@ -524,7 +524,7 @@ public class GameplayScene extends PScene {
 		final int xOffset = 32; // to align with rectMode(CENTER)
 		final int yOffset = 32; // to align with rectMode(CENTER)
 		final int l = 6400;
-		for (int i = -l; i < l; i += SideScroller.snapSize) {
+		for (int i = -l; i < l; i += Main.snapSize) {
 			applet.line(-l, i + yOffset, l, i + yOffset); // horizontal
 			applet.line(i + xOffset, -l, i + xOffset, l); // vertical
 		}

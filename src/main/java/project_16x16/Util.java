@@ -14,14 +14,14 @@ import processing.core.PVector;
 
 public final class Util {
 
-	private static SideScroller applet;
+	private static Main applet;
 
 	/**
 	 * The Util class provides static functions, but uses a PApplet (SideScroller)
 	 * instance within the static methods. This instance must be assigned in a
 	 * static method, here, before anything else uses this class.
 	 */
-	public static void assignApplet(SideScroller a) {
+	public static void assignApplet(Main a) {
 		applet = a;
 	}
 

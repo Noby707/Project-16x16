@@ -7,7 +7,7 @@ import processing.data.JSONObject;
 
 import project_16x16.scene.GameplayScene;
 import project_16x16.PClass;
-import project_16x16.SideScroller;
+import project_16x16.Main;
 import project_16x16.Tileset;
 import project_16x16.Util;
 
@@ -43,7 +43,7 @@ public abstract class EditableObject extends PClass {
 
 	protected PVector editOffset;
 
-	public EditableObject(SideScroller a, GameplayScene g) {
+	public EditableObject(Main a, GameplayScene g) {
 		super(a);
 
 		pos = new PVector(0, 0);
@@ -107,7 +107,7 @@ public abstract class EditableObject extends PClass {
 			}
 
 			// Duplicate Object Shift
-			if (applet.keyPressEvent && applet.isKeyDown(SideScroller.SHIFT)) {
+			if (applet.keyPressEvent && applet.isKeyDown(Main.SHIFT)) {
 				EditableObject copy; // Duplicate Instance
 				switch (type) {
 					case COLLISION :
@@ -146,8 +146,8 @@ public abstract class EditableObject extends PClass {
 
 			if (focus && applet.mousePressed && applet.mouseButton == LEFT) {
 				pos = new PVector(
-						Util.roundToNearest(applet.getMouseCoordGame().x + editOffset.x, SideScroller.snapSize),
-						Util.roundToNearest(applet.getMouseCoordGame().y + editOffset.y, SideScroller.snapSize));
+						Util.roundToNearest(applet.getMouseCoordGame().x + editOffset.x, Main.snapSize),
+						Util.roundToNearest(applet.getMouseCoordGame().y + editOffset.y, Main.snapSize));
 			}
 		}
 	}

@@ -10,7 +10,7 @@ import processing.core.PImage;
 import project_16x16.projectiles.MagicProjectile;
 import project_16x16.projectiles.Swing;
 import project_16x16.scene.GameplayScene;
-import project_16x16.SideScroller;
+import project_16x16.Main;
 import project_16x16.Tileset;
 import project_16x16.Util;
 
@@ -22,7 +22,7 @@ public class MagicSourceObject extends GameObject {
 	private static ArrayList<PImage> particleAnimation;
 	private ParticleSystem trail;
 
-	public MagicSourceObject(SideScroller a, GameplayScene g) {
+	public MagicSourceObject(Main a, GameplayScene g) {
 		super(a, g);
 
 		type = type.OBJECT;
@@ -90,7 +90,7 @@ public class MagicSourceObject extends GameObject {
 								+ height / 2);
 	}
 	
-	private void setParticleAnimation(SideScroller a) {
+	private void setParticleAnimation(Main a) {
 		particleAnimation = new ArrayList<PImage>();
 		PImage image = Tileset.getTile("MAGIC_SOURCE");
 		float scale = 0.4f;

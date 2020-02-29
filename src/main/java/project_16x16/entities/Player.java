@@ -9,8 +9,8 @@ import processing.data.JSONObject;
 import project_16x16.Audio;
 import project_16x16.Constants;
 import project_16x16.Options;
-import project_16x16.SideScroller;
-import project_16x16.SideScroller.debugType;
+import project_16x16.Main;
+import project_16x16.Main.debugType;
 import project_16x16.Tileset;
 import project_16x16.Util;
 import project_16x16.Audio.SFX;
@@ -83,7 +83,7 @@ public final class Player extends EditableObject {
 	 * 
 	 * @param a SideScroller game controller.
 	 */
-	public Player(SideScroller a, GameplayScene g , boolean isMultiplayerPlayer) {
+	public Player(Main a, GameplayScene g , boolean isMultiplayerPlayer) {
 
 		super(a, g);
 

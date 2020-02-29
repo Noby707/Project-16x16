@@ -23,7 +23,7 @@ public class Tileset {
 	private static final String DATAPATH = "tileData.json";
 	private static final int SCALE = 4;
 	
-	private static SideScroller applet;
+	private static Main applet;
 	private static PImage graphicsSheet;
 	
 	private static HashMap<String, Integer> tileRef = new HashMap<String, Integer>();
@@ -37,7 +37,7 @@ public class Tileset {
 		COLLISION, BACKGROUND, OBJECT, ENTITY;
 	}
 	
-	public static void load(SideScroller app){
+	public static void load(Main app){
 		applet = app;
 		graphicsSheet = applet.loadImage(TILESHEETPATH);
 		try {

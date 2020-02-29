@@ -2,7 +2,7 @@ package project_16x16.ui;
 
 import processing.core.PApplet;
 import project_16x16.PClass;
-import project_16x16.SideScroller;
+import project_16x16.Main;
 
 public class List extends PClass {
 
@@ -17,7 +17,7 @@ public class List extends PClass {
 	ScrollBarVertical scrollBar;
 	int elementOffSet;
 
-	public List(SideScroller a, String ar[], int elementOffset) {
+	public List(Main a, String ar[], int elementOffset) {
 		super(a);
 		x = 0;
 		y = 0;
